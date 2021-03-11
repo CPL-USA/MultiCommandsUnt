@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiCommands", "MultiCommands\MultiCommands.csproj", "{737399B5-6849-4D08-A255-10D5792102FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{737399B5-6849-4D08-A255-10D5792102FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737399B5-6849-4D08-A255-10D5792102FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737399B5-6849-4D08-A255-10D5792102FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737399B5-6849-4D08-A255-10D5792102FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DF3CC5C4-B0E0-4BB8-9A4E-E62BDD3CF8E4}
+	EndGlobalSection
+EndGlobal
