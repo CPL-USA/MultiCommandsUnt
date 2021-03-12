@@ -28,6 +28,8 @@ namespace MultiCommands.Commands
         {
             UnturnedPlayer player = (UnturnedPlayer)caller;
 
+            player.MaxSkills();
+
             UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_maxskills_successfully"), Color.yellow);
 
         }

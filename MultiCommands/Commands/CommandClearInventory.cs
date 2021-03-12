@@ -28,30 +28,19 @@ namespace MultiCommands.Commands
         public void Execute(IRocketPlayer caller, string[] command)
         {
             UnturnedPlayer player = (UnturnedPlayer)caller;
-
-
-
-
             player.Player.equipment.dequip();
 
             for (byte page = 0; page < PlayerInventory.PAGES-2; page++)
             {
-
                 byte itemCount = (byte)player.Player.inventory.items[page].items.Count;
-
                 for (byte i = 0; i < itemCount; i++)
                 {
-
                     player.Player.inventory.removeItem(page, 0);
-                
                 }
-   
             }
 
             player.Player.channel.send("tellSlot", ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, new object[] { 0, 0, new byte[0] });
-
             player.Player.channel.send("tellSlot", ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER, new object[] { 1, 0, new byte[0] });
-
 
             try
             {
@@ -78,15 +67,9 @@ namespace MultiCommands.Commands
             }
             catch (Exception x)
             {
-
                 Console.WriteLine("Error:" + x.ToString());
             }
-            
-
-
             UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_ci_successfully"), Color.yellow);
-
-
         }
 
         private void removeCloth(PlayerInventory inventory)
