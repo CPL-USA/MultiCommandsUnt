@@ -30,7 +30,7 @@ namespace MultiCommands
 
             {"command_ci_successfully", "Инвентарь очищен." },
 
-            {"experience_error", "/exp [опыт] или /exp [nick] [опыт]"},
+            {"experience_error", "/exp [опыт] или /exp [опыт] [nick]"},
             {"experience_successfully", "Опыт успешно выдан!"},
             {"exp_player_not_found", "Игрок {0} не найден!" },
             {"exp_toplayer", "Игрок {0}  выдал вам {1} опыта." },
