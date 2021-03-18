@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CommandClearInventory.cs" />
+    <Compile Include="Commands\CommandExperience.cs" />
     <Compile Include="Commands\CommandMaxSkills.cs" />
+    <Compile Include="Commands\CommandShare.cs" />
     <Compile Include="MultiCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

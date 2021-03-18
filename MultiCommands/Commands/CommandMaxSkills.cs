@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace MultiCommands.Commands
 {
-    class CommandMaxSkills : IRocketCommand
+    public class CommandMaxSkills : IRocketCommand
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
