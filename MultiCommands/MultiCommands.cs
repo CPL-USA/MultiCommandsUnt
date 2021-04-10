@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace MultiCommands
 {
@@ -21,6 +22,26 @@ namespace MultiCommands
         protected override void Unload()
         {
             
+        }
+
+        public int DestroyBarricadesInRadius(Vector3 position, float radius)
+        {
+            int destroyCount = 0;
+            List<Transform> result = null;
+            BarricadeManager.getBarricadesInRadius(position, radius, result);
+            if (result != null)
+            {
+
+                foreach (Transform transform in result)
+                {
+                    if (BarricadeManager.tryGetInfo(transform, out byte x, out byte y, out ushort plant, out ushort index, out BarricadeRegion region))
+                    {
+                        BarricadeManager.destroyBarricade(region, x, y, plant, index);
+                        destroyCount++;
+                    }
+                }
+            }
+            return destroyCount;
         }
 
 
