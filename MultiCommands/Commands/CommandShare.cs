@@ -64,30 +64,3 @@ namespace MultiCommands.Commands
 
     }
 }
-
-//if (command.Length <= 1)
-//{
-//    UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_share_not_found_player"), Color.red);
-//}
-//else
-//{
-//    uint.TryParse(command[0], out uint result);
-//    UnturnedPlayer player2 = UnturnedPlayer.FromName(command[1]);
-//    if (player2 == null)
-//    {
-//        UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_share_player2_not_found", command[1]), Color.magenta);
-//        return;
-//    }
-//    if (player.Experience < result)
-//    {
-//        UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_share_insufficient_experience"), Color.red);
-//    }
-//    else
-//    {
-//        player.Experience -= result;
-//        UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_share_experience", result, player2.CharacterName), Color.green);
-//        player2.Experience += result;
-//        UnturnedChat.Say(player2, MultiCommands.Instance.Translate("command_share_get_experience", result, player.CharacterName), Color.green);
-//    }
-
-//}

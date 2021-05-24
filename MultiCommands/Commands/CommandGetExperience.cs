@@ -73,30 +73,3 @@ namespace MultiCommands.Commands
         }
     }
 }
-//if (command.Length == 0)
-//{
-//    UnturnedChat.Say(player, MultiCommands.Instance.Translate("experience_error"), Color.red);
-//    return;
-//}
-
-//uint.TryParse(command[0], out uint result);
-//if (command.Length == 1)
-//{
-//    player.Experience += result;
-//    UnturnedChat.Say(player, MultiCommands.Instance.Translate("experience_successfully"), Color.green);
-
-//}
-//else if (command.Length == 2)
-//{
-//    UnturnedPlayer toPlayer = UnturnedPlayer.FromName(command[1]);
-//    if (toPlayer == null)
-//    {
-//        UnturnedChat.Say(player, MultiCommands.Instance.Translate("exp_player_not_found", command[1]), Color.red);
-//        return;
-//    }
-
-//    toPlayer.Experience += result;
-
-//    UnturnedChat.Say(toPlayer, MultiCommands.Instance.Translate("exp_toplayer", player.CharacterName, result));
-//    UnturnedChat.Say(player, MultiCommands.Instance.Translate("exp_give_player", result, toPlayer.CharacterName));
-//}
