@@ -1,6 +1,7 @@
 ﻿using Rocket.API;
 using Rocket.Unturned.Chat;
 using Rocket.Unturned.Player;
+using SDG.Unturned;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +25,13 @@ namespace MultiCommands.Commands
 
         public List<string> Permissions => new List<string>();
 
-        public void Execute(IRocketPlayer caller, string[] command)
+        public void Execute(IRocketPlayer caller, string[] command) // /ms
         {
             UnturnedPlayer player = (UnturnedPlayer)caller;
 
             player.MaxSkills();
 
-            UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_maxskills_successfully"), Color.yellow);
+            ChatManager.serverSendMessage(MultiCommands.Instance.Translate("command_max_skills_successfully"), Color.white, null, player.SteamPlayer(), EChatMode.GLOBAL, null, true);
 
         }
     }

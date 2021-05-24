@@ -15,13 +15,13 @@ namespace MultiCommands.Commands
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
-        public string Name => "ci";
+        public string Name => "clearinventory";
 
         public string Help => string.Empty;
 
         public string Syntax => string.Empty;
 
-        public List<string> Aliases => new List<string>() {"clearinventory"};
+        public List<string> Aliases => new List<string>() {"ci"};
 
         public List<string> Permissions => new List<string>();
 
@@ -69,7 +69,7 @@ namespace MultiCommands.Commands
             {
                 Console.WriteLine("Error:" + x.ToString());
             }
-            UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_ci_successfully"), Color.yellow);
+            UnturnedChat.Say(player, MultiCommands.Instance.Translate("command_clear_inventory_successfully"), Color.green);
         }
 
         private void removeCloth(PlayerInventory inventory)

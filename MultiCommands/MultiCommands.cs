@@ -27,42 +27,42 @@ namespace MultiCommands
         public int DestroyBarricadesInRadius(Vector3 position, float radius)
         {
             int destroyCount = 0;
-            List<Transform> result = null;
+            List<Transform> result = new List<Transform>();
             BarricadeManager.getBarricadesInRadius(position, radius, result);
-            if (result != null)
-            {
 
                 foreach (Transform transform in result)
                 {
                     if (BarricadeManager.tryGetInfo(transform, out byte x, out byte y, out ushort plant, out ushort index, out BarricadeRegion region))
                     {
                         BarricadeManager.destroyBarricade(region, x, y, plant, index);
+                        
                         destroyCount++;
                     }
                 }
-            }
             return destroyCount;
         }
 
 
         public override TranslationList DefaultTranslations => new TranslationList()
         {
-            {"command_maxskills_successfully", "MaxSkills ^_^" },
+            {"command_get_experience_help", "/exp [nick] [count] <color=yellow>или</color> /exp [count]" },
+            {"command_get_experience_to_player_successfully", "Вы получили опыт от <color=red>{0}</color>, в размере: <color=green>{1}</color> ед." },
+            {"command_get_experience_successfully", "Вы успешно выдали себе опыт." },
+            {"command_get_experience_to_player", "Вы успешно выдали опыт игроку <color=red>{0}</color>, в размере: <color=green>{1}</color> ед." },
+            {"command_get_experience_failed", "Не удалось выдать опыт." },
+            {"command_get_experience_to_player_not_found", "Игрок не найден!" },
 
-            {"command_ci_successfully", "Инвентарь очищен." },
+            {"command_max_skills_successfully", "<color=red>M</color><color=#FFA500>a</color><color=yellow>x</color><color=green>S</color><color=#00FFFF>k</color><color=blue>i</color><color=#FF00FF>l</color><color=red>l</color><color=#FFA500>s</color> ^_^" },
 
-            {"experience_error", "/exp [опыт] или /exp [опыт] [nick]"},
-            {"experience_successfully", "Опыт успешно выдан!"},
-            {"exp_player_not_found", "Игрок {0} не найден!" },
-            {"exp_toplayer", "Игрок {0}  выдал вам {1} опыта." },
-            {"exp_give_player", "Вы успешно выдали {0} опыта игроку {1}" },
+            {"command_share_successfully", "Вы успешно передали <color=green>{0}</color> ед. опыта, игроку <color=yellow>{1}</color>." },
+            {"command_share_to_player_successfully", "Игрок <color=yellow>{0}</color> передал Вам <color=green>{1}</color> ед. опыта." },
+            {"command_share_failed", "Не удалось передать опыт." },
+            {"command_share_help", "/share [nick] [count]" },
+
+            {"command_clear_inventory_successfully", "Инвентарь очищен." }
 
 
-            {"command_share_not_found_player", "/share [Experience] [Nickname]"},
-            {"command_share_insufficient_experience", "У Вас нет такого количества опыта." },
-            {"command_share_experience", "Вы успешно передали {0} опыта, игроку {1}"},
-            {"command_share_get_experience", "Вы получили {0} опыта от {1}" },
-            {"command_share_player2_not_found", "{0} нет на сервере." },
+
         };
 
         

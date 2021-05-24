@@ -34,9 +34,6 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>D:\steam\steamapps\common\Unturned\Unturned_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\GiveItem1\GiveItem1\lib\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
     <Reference Include="Rocket.API">
       <HintPath>D:\steam\steamapps\common\Unturned\Extras\Rocket.Unturned\Rocket.API.dll</HintPath>
     </Reference>
@@ -69,8 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CommandClearInventory.cs" />
-    <Compile Include="Commands\CommandDestroy.cs" />
-    <Compile Include="Commands\CommandExperience.cs" />
+    <Compile Include="Commands\CommandDestroyObjects.cs" />
+    <Compile Include="Commands\CommandGetExperience.cs" />
     <Compile Include="Commands\CommandMaxSkills.cs" />
     <Compile Include="Commands\CommandShare.cs" />
     <Compile Include="MultiCommands.cs" />

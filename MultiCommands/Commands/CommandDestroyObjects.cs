@@ -6,10 +6,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace MultiCommands.Commands
 {
-    public class CommandDestroy : IRocketCommand
+    public class CommandDestroyObjects : IRocketCommand
     {
         public AllowedCaller AllowedCaller => AllowedCaller.Player;
 
@@ -23,7 +24,7 @@ namespace MultiCommands.Commands
 
         public List<string> Permissions => new List<string>();
 
-        public void Execute(IRocketPlayer caller, string[] command)
+        public void Execute(IRocketPlayer caller, string[] command) // /destroy [radius]
         {
             UnturnedPlayer player = (UnturnedPlayer)caller;
 
@@ -31,6 +32,10 @@ namespace MultiCommands.Commands
             {
                 float.TryParse(command[0], out float result);
                 UnturnedChat.Say(player, "Удалено " + MultiCommands.Instance.DestroyBarricadesInRadius(player.Position, result) + " объектов.");
+            }
+            else
+            {
+                UnturnedChat.Say(player, "/destroy [radius].", Color.red);
             }
 
         }
